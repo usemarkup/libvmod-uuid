@@ -23,7 +23,7 @@ curl Https://codeload.github.com/otto-de/libvmod-uuid/tar.gz/v${VERSION} -o rpmb
 
 # install epel7 repo
 sudo yum install -y -q \
-     https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+     https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E %{rhel}).noarch.rpm
 
 
 curl -s https://packagecloud.io/install/repositories/varnishcache/varnish41/script.rpm.sh | sudo bash
